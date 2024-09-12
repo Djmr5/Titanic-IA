@@ -27,3 +27,6 @@ In-depth analysis and machine learning model training on the famous Titanic data
 - Data splitting and model training, hyperparameter tuning on required models.
 - Decision boundaries and feature importance visualizations for the models.
 
+## LINK COLAB
+
+https://colab.research.google.com/drive/1Ec7SvsvpqWjmN3n6nnp8lMoGY6U_qyVp?usp=sharing
