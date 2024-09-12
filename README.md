@@ -1,31 +1,38 @@
-# Titanic Dataset Analysis and Model Training
+# Análisis del Dataset del Titanic y Entrenamiento de Modelos
 
-In-depth analysis and machine learning model training on the famous Titanic dataset from Kaggle. The goal is to predict the survival of passengers based on various features like class, age, fare, and family size, among others.
+Este repositorio contiene un análisis detallado y el entrenamiento de varios modelos de aprendizaje automático sobre el famoso dataset del Titanic de Kaggle. El objetivo es predecir la supervivencia de los pasajeros en función de diversas características como la clase, edad, tarifa y tamaño de la familia, entre otros.
 
-### Features Analyzed:
-- `Pclass`: Passenger class (1st, 2nd, 3rd)
-- `Age`: Age of passengers
-- `Sex`: Gender of passengers
-- `SibSp`: Number of siblings/spouses aboard
-- `Parch`: Number of parents/children aboard
-- `Fare`: Fare paid for the ticket
-- `Embarked`: Port of embarkation (C = Cherbourg, Q = Queenstown, S = Southampton)
+### Propuesta para Solucionar el Reto
+El enfoque principal fue preparar los datos, seleccionar características clave y aplicar varios modelos de clasificación para predecir la probabilidad de supervivencia. Se enfrentaron varios desafíos, como la presencia de datos faltantes, la no linealidad potencial de los datos, y el desbalance de clases. Estos problemas se abordaron mediante la imputación de datos, la normalización y la selección adecuada de características y modelos.
 
-### Models Used:
-1. **Logistic Regression**: To capture linear relationships between survival and features like age, fare, and class.
-2. **K-Nearest Neighbors (KNN)**: For instance-based learning, using local patterns to predict survival based on similar passengers.
-3. **Random Forest**: A powerful ensemble method to capture complex feature interactions and handle missing data effectively.
-4. **Support Vector Machine (SVM)**: To find optimal decision boundaries in the dataset for binary classification (kernel trick).
+### Problemas Encontrados y Soluciones
+- **Datos Faltantes**: Algunas columnas contenían muchos valores faltantes, especialmente en las variables `Cabin` y `Age`. Este problema se resolvió mediante la **imputación** de datos faltantes con la mediana o eliminando características que no aportaban información significativa.
+- **No Linealidad de los Datos**: Se consideró que los datos podrían no ser lineales. Para abordar esto, se probaron modelos como **Random Forest** y **K-Nearest Neighbors (KNN)**, que no suponen una relación estrictamente lineal entre las características.
+- **Distribución Anormal**: Algunas variables como la tarifa (`Fare`) mostraban una distribución sesgada. Se utilizó la **normalización** de estas características para reducir el impacto de la distribución anormal.
 
-### Key Tasks:
-- Data preprocessing and feature engineering, including handling missing values and transforming categorical data.
-- Hyperparameter tuning with cross-validation for each model.
-- Evaluation of model performance using accuracy, confusion matrix, and classification reports.
+### Características Analizadas:
+- `Pclass`: Clase de los pasajeros (1ª, 2ª, 3ª)
+- `Age`: Edad de los pasajeros
+- `Sex`: Género de los pasajeros
+- `SibSp`: Número de hermanos/esposos a bordo
+- `Parch`: Número de padres/hijos a bordo
+- `Fare`: Tarifa pagada por el billete
+- `Embarked`: Puerto de embarque (C = Cherburgo, Q = Queenstown, S = Southampton)
 
-### Visualizations:
-- Exploratory Data Analysis (EDA) with visualizations to understand the relationship between features and survival.
-- Data splitting and model training, hyperparameter tuning on required models.
-- Decision boundaries and feature importance visualizations for the models.
+### Modelos Utilizados:
+1. **Regresión Logística**: Captura relaciones lineales entre las características y la supervivencia, considerando variables como la edad, tarifa y clase.
+2. **K-Nearest Neighbors (KNN)**: Modelo basado en instancias que predice la supervivencia basándose en los pasajeros más cercanos.
+3. **Random Forest**: Un método de ensamble que captura interacciones complejas entre características y maneja bien los datos faltantes.
+4. **Support Vector Machine (SVM)**: Encuentra fronteras óptimas para clasificar a los sobrevivientes, útil para datos con relaciones no lineales.
+
+### Tareas Principales:
+- Preprocesamiento de datos y **ingeniería de características**, como la imputación de valores faltantes y la transformación de datos categóricos.
+- **Ajuste de hiperparámetros** utilizando validación cruzada para optimizar cada modelo.
+- Evaluación del rendimiento de los modelos usando **accuracy**, matrices de confusión y reportes de clasificación.
+
+### Visualizaciones:
+- Análisis exploratorio de los datos (**EDA**) con gráficos para entender la relación entre las características y la supervivencia.
+- División de datos y entrenamiento de modelos, ajuste de hiperparámetros en los modelos necesarios.
 
 ## LINK COLAB
 
